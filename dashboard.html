@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#credits">Credits</a></li>
+        <li><a href="#tracker">Tracker</a></li>
+        <li><a href="#profile">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="credits">
+      <h2>Apply for a Loan</h2>
+      <form id="loan-form">
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" placeholder="e.g., 50000" required>
+        <label for="collateral">Collateral Value:</label>
+        <input type="number" id="collateral" placeholder="e.g., 100000" required>
+        <button type="submit">Check Eligibility</button>
+        <p id="loan-result"></p>
+      </form>
+      <div id="loan-schemes"></div>
+    </section>
+
+    <section id="tracker">
+      <h2>Loan Tracker</h2>
+      <div id="loan-history">
+        <p>No loans found.</p>
+      </div>
+    </section>
+
+    <section id="profile">
+      <h2>Your Profile</h2>
+      <div id="credit-score">
+        <p>Loading your credit score...</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/dashboard.js"></script>
+</body>
+</html>

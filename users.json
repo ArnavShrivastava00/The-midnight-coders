@@ -1,0 +1,6 @@
+[
+    { "username": "user1", "password": "pass1", "creditScore": 750 },
+    { "username": "user2", "password": "pass2", "creditScore": 680 },
+    { "username": "user3", "password": "pass3", "creditScore": 720 },
+    { "username": "user4", "password": "pass4", "creditScore": 640 }
+  ]

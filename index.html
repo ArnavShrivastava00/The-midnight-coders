@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- LocomotiveScroll Library -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <!-- Swiper.js Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        .blog-slider__expanded-content {
+            display: none;
+        }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <style>
+    body {
+        font-family: 'Nunito';font-size: 22px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <h1>Loading...</h1>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" >
+        <div class="logo">Banking Project</div>
+        <ul>
+            <li><a href="#loading-screen">Home</a></li>
+            <li><a href="#credits">Credits</a></li>
+            <li><a href="#bankhistory">Bank History</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a id="icon" href="#"><img src="icon.png" alt="icon"></a></li>
+        </ul>
+    </nav>
+
+    <div id="background"></div>
+
+    <div id="News">
+        <br> News
+    </div>
+
+    <!-- Blog Slider Section -->
+    <div class="blog-slider swiper-container">
+        <div class="blog-slider__wrp swiper-wrapper">
+            <div class="blog-slider__item swiper-slide">
+                <div class="blog-slider__img">
+                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+                </div>
+                <div class="blog-slider__content">
+                    <span class="blog-slider__code">12 March 2025</span>
+                    <div class="blog-slider__title">1. AI's Impact on Financial Stability</div>
+                    <div class="blog-slider__text">Concerns over AI's Growing Role in Financial Services</div>
+                    <a href="#" class="blog-slider__button" onclick="toggleExpand(1)">READ MORE</a>
+                    <div id="expanded-content-1" class="blog-slider__expanded-content">
+                        <p>The Governor of the Reserve Bank of India (RBI), Shaktikanta Das, recently raised alarms about the potential risks artificial intelligence (AI) poses to financial stability...</p>
+                        <!-- Full Blog Content Here -->
+                        <button class="blog-slider__button" onclick="toggleExpand(1)">MINIMIZE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+                <div class="blog-slider__img">
+                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp" alt="">
+                </div>
+                <div class="blog-slider__content">
+                    <span class="blog-slider__code">23 November 2024</span>
+                    <div class="blog-slider__title">2. Brazil Strengthens Antitrust Regulations</div>
+                    <div class="blog-slider__text">Brazil Proposes New Antitrust Laws Targeting Big Tech</div>
+                    <a href="#" class="blog-slider__button" onclick="toggleExpand(2)">READ MORE</a>
+                    <div id="expanded-content-2" class="blog-slider__expanded-content">
+                        <p>Brazil’s government has proposed new reforms aimed at tightening antitrust regulations to prevent monopolistic practices by large technology firms...</p>
+                        <!-- Full Blog Content Here -->
+                        <button class="blog-slider__button" onclick="toggleExpand(2)">MINIMIZE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+                <div class="blog-slider__img">
+                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp" alt="">
+                </div>
+                <div class="blog-slider__content">
+                    <span class="blog-slider__code">7 August 2024</span>
+                    <div class="blog-slider__title">3. VanEck’s $30 Million Investment in Crypto and AI</div>
+                    <div class="blog-slider__text">VanEck Allocates $30 Million for Emerging Tech Startup</div>
+                    <a href="#" class="blog-slider__button" onclick="toggleExpand(3)">READ MORE</a>
+                    <div id="expanded-content-3" class="blog-slider__expanded-content">
+                        <p>VanEck, a leading investment management firm, has announced that it is launching a $30 million fund to invest in cryptocurrency, blockchain, and artificial intelligence (AI) startups...</p>
+                        <!-- Full Blog Content Here -->
+                        <button class="blog-slider__button" onclick="toggleExpand(3)">MINIMIZE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+                <div class="blog-slider__img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Reserve_Bank_of_India_logo.svg/1200px-Reserve_Bank_of_India_logo.svg.png" alt="RBI">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/State_Bank_of_India_logo.svg" alt="State Bank of India">
+                </div>
+                <div class="blog-slider__content">
+                    <span class="blog-slider__code">15 September 2024</span>
+                    <div class="blog-slider__title">4. RBI Maintains Key Lending Rate Amid Inflation Concerns</div>
+                    <div class="blog-slider__text">RBI Keeps Key Interest Rate Unchanged Amid Economic Concerns</div>
+                    <a href="#" class="blog-slider__button" onclick="toggleExpand(4)">READ MORE</a>
+                    <div id="expanded-content-4" class="blog-slider__expanded-content">
+                        <p>The Reserve Bank of India (RBI) has decided to maintain its key lending rate at 6.5%, marking the tenth consecutive meeting where the central bank has chosen not to make any changes to the rate...</p>
+                        <!-- Full Blog Content Here -->
+                        <button class="blog-slider__button" onclick="toggleExpand(4)">MINIMIZE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+                <div class="blog-slider__img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Reserve_Bank_of_India_logo.svg/1200px-Reserve_Bank_of_India_logo.svg.png" alt="RBI">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/State_Bank_of_India_logo.svg" alt="State Bank of India">
+                </div>
+                <div class="blog-slider__content">
+                    <span class="blog-slider__code">5 December 2024</span>
+                    <div class="blog-slider__title">5. India Set for Steepest Rise in Living Standards</div>
+                    <div class="blog-slider__text">India's Economic Outlook Signals Significant Improvement in Living Standards</div>
+                    <a href="#" class="blog-slider__button" onclick="toggleExpand(5)">READ MORE</a>
+                    <div id="expanded-content-5" class="blog-slider__expanded-content">
+                        <p>Indian Finance Minister Nirmala Sitharaman has projected that India will experience the steepest rise in living standards in the coming decades...</p>
+                        <!-- Full Blog Content Here -->
+                        <button class="blog-slider__button" onclick="toggleExpand(5)">MINIMIZE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Credits Section -->
+<!-- Credits Section -->
+<div id="credits">
+    <h1>Credits</h1>
+    <br>
+    <br>
+    <br>
+    <div class="button-container">
+        <button class="btn-2">Home Loan</button>
+        <button class="btn-2">Personal Loan</button>
+        <button class="btn-2">Education Loan</button>
+        <button class="btn-2">Business Loan</button>
+        <button class="btn-2">Vehicle Loan</button>
+        <button class="btn-2">Other</button>
+    </div>
+</div>
+ 
+<footer id="about"> 
+  <div id="ab">About Us</div>
+  <div id="b">Copyright © 2004-2025
+  Website.com Solutions Inc. All Rights Reserved. All other trademarks and copyrights are the property of their respective holders.</div>
+  <div id="a">www.example@gmail.com</div>
+  <div id="a">Contact Us: +91-532399019</div>
+  <div id="a">Our social Media Handles : </div>
+  <ul class="social-icons"> 
+      <li><a href="#"><i class="fa-brands fa-instagram instagram"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-whatsapp whatsapp"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-youtube youtube"></i></a></li>
+  </ul>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script>
+        function toggleExpand(blogId) {
+            const content = document.getElementById(expanded-content-$,{blogId});
+            const isVisible = content.style.display === 'block';
+            content.style.display = isVisible ? 'none' : 'block';
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const loadingScreen = document.getElementById("loading-screen");
+            loadingScreen.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
